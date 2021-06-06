@@ -51,11 +51,10 @@ export default function SingleCocktail() {
         } else {
           setCocktails(null);
         }
-        setLoading(false);
       } catch (error) {
-        setLoading(false);
         console.log(error);
       }
+      setLoading(false);
     }
     getCocktail();
   }, [id]);
@@ -65,50 +64,43 @@ export default function SingleCocktail() {
   }
 
   if (!cocktails) {
-    return <h2 className='section-title'>no cocktail to display</h2>
+    return <h2 className="section-title">no cocktail to display</h2>;
   } else {
-    const {
-      name,
-      image,
-      category,
-      info,
-      glass,
-      instructions,
-      ingredients,
-    } = cocktails
+    const { name, image, category, info, glass, instructions, ingredients } =
+      cocktails;
     return (
-      <section className='section cocktail-section'>
-        <Link to='/' className='btn btn-primary'>
+      <section className="section cocktail-section">
+        <Link to="/" className="btn btn-primary">
           back home
         </Link>
-        <h2 className='section-title'>{name}</h2>
-        <div className='drink'>
+        <h2 className="section-title">{name}</h2>
+        <div className="drink">
           <img src={image} alt={name}></img>
-          <div className='drink-info'>
+          <div className="drink-info">
             <p>
-              <span className='drink-data'>name :</span> {name}
+              <span className="drink-data">name :</span> {name}
             </p>
             <p>
-              <span className='drink-data'>category :</span> {category}
+              <span className="drink-data">category :</span> {category}
             </p>
             <p>
-              <span className='drink-data'>info :</span> {info}
+              <span className="drink-data">info :</span> {info}
             </p>
             <p>
-              <span className='drink-data'>glass :</span> {glass}
+              <span className="drink-data">glass :</span> {glass}
             </p>
             <p>
-              <span className='drink-data'>instructons :</span> {instructions}
+              <span className="drink-data">instructons :</span> {instructions}
             </p>
             <p>
-              <span className='drink-data'>ingredients :</span>
+              <span className="drink-data">ingredients :</span>
               {ingredients.map((item, index) => {
-                return item ? <span key={index}> {item}</span> : null
+                return item ? <span key={index}> {item}</span> : null;
               })}
             </p>
           </div>
         </div>
       </section>
-    )
+    );
   }
 }
