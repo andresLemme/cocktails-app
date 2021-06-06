@@ -1,0 +1,11 @@
+.about-section{
+  margin: 0 auto;
+  width: 40rem;
+  max-width: 85vw;
+}
+
+.about-section p{
+  letter-spacing: 2px;
+  font-weight: 400;
+  line-height: 2rem;
+}

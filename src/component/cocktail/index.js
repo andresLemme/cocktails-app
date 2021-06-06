@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './cocktail.css'
 
 export default function Cocktail({id, image, name, info, glass}) {
   return (

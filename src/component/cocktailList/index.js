@@ -2,7 +2,7 @@ import React from "react";
 import { useGlobalContext } from "../../context";
 import Cocktail from "../cocktail";
 import Loading from "../loading";
-
+import './cocktailLis.css'
 
 export default function CocktailList() {
   const { cocktails, loading } = useGlobalContext();
@@ -19,7 +19,7 @@ export default function CocktailList() {
   }
   return (
     <section className="section">
-      <h2>Cocktail List</h2>
+      <h2 className="section-title">Cocktail List</h2>
       <div className="cocktails-center">
     {cocktails.map((item, key) =>{
       return (
