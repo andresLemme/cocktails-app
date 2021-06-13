@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import Loading from "../../component/loading";
+import "./singleCoacktail.css"
 
-const url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
+// const url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
 
 export default function SingleCocktail() {
   const { id } = useParams();
@@ -14,10 +15,10 @@ export default function SingleCocktail() {
     setLoading(true);
     async function getCocktail() {
       try {
-        const response = await fetch(`${url}${id}`);
+        const response = await fetch( `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`);
         const data = await response.json();
         console.log(data);
-        if (data.drink) {
+        if (data.drinks) {
           const {
             strDrink: name,
             strDrinkThumb: image,

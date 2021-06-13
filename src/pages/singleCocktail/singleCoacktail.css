@@ -1,0 +1,56 @@
+.cocktail-section {
+  text-align: center;
+}
+.drink {
+  width: 85vw;
+  max-width: 1170px;
+  margin: 0 auto;
+  text-align: left;
+  /* grid-template-columns: 2fr 3fr;
+  gap: 3rem;
+  display: grid;
+  align-items: center; */
+}
+.drink img {
+  border-radius: 0.25rem;
+  width: 100%;
+  display: block;
+}
+.drink p {
+  font-weight: bold;
+  text-transform: capitalize;
+  line-height: 1.8;
+}
+.drink span {
+  margin-right: 0.5rem;
+}
+.drink-data {
+  background: #476a2e;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  color: #fff;
+}
+.drink-info {
+  padding-top: 2rem;
+}
+.btn-primary {
+  background-color: #476a2e;
+  color: #fff;
+  padding: 0.50rem;
+  border-radius: 5px;
+  text-decoration: none;
+  
+}
+  
+
+@media screen and (min-width: 992px) {
+  .drink {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  .drink-info {
+    padding-top: 0;
+  }
+}
